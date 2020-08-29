@@ -27,7 +27,6 @@ public class Files {
 	  for(File file:folder.listFiles()) {
 		  Date date=new Date(file.lastModified());
 		  LocalDate localDate=date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-		  dfs.getMonths();
 		  String month=dfs.getMonths()[localDate.getMonthValue()-1];
 		  if(!count.containsKey(month))
 			  count.put(month, 0);
